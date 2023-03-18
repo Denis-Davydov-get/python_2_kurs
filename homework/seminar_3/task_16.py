@@ -6,3 +6,10 @@
 #     1 2 3 4 5
 #     3 загаданное число
 #     -> 1 раз встречается
+size = int(input("Input size massive: "))
+your_number = int(input("Input your number: "))
+count = 0
+for i in range(size + 1):
+    if i == your_number:
+        count += 1
+print("Your number in massiv - ", count, "onse")

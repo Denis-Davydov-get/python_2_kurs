@@ -11,3 +11,27 @@
 #
 # ноутбук
 #     12
+dict_english = {1: "A, E, I, O, U, L, N, S, T, R", 2: "D, G", 3: "B, C, M, P", 4: "F, H, V, W, Y", 5: "K", 8: "J, X",
+                10: "Q, Z"}
+dict_rus = {1: "А, В, Е, И, Н, О, Р, С, Т", 2:"Д, К, Л, М, П, У", 3: "Б, Г, Ё, Ь, Я", 4:"Й, Ы", 5:"Ж, З, Х, Ц, Ч",
+             8:"Ш, Э, Ю", 10:"Ф, Щ, Ъ"}
+
+def len_char(word, dict_language):
+    sum_char = 0
+    for i in word:
+        for k, v in dict_language.items():
+            if i in v:
+                sum_char += k
+    return sum_char
+input_user = int(input("Введите 1, если хотите посчитать слово на английском языке или введите 0, "
+                   "если на русском: "))
+
+if input_user == 1:
+    word_english = input("Введите слово на английском языке: ").upper()
+    print(len_char(word_english, dict_english))
+elif input_user == 0:
+    word_rus = input("Введите слово на русском языке: ").upper()
+    print(len_char(word_rus, dict_rus))
+else:
+    print("Вы ввели не то число")
+

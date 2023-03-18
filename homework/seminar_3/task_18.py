@@ -6,3 +6,14 @@
 #     1 2 3 4 5
 #     6 загаданное число
 #     -> 5 ближайшее число по величине
+size = int(input("Input size massive: "))
+your_number = int(input("Input your number: "))
+number = 0
+for i in range(size + 1):
+    if i == your_number:
+        number = i
+        print(number)
+    else:
+        print("Данного числа нет в массиве, блищайшее к нему: ", size)
+        break
+
