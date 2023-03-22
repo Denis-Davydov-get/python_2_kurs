@@ -11,8 +11,7 @@ your_number = int(input("Input your number: "))
 number = 0
 for i in range(size + 1):
     if i == your_number:
-        number = i
-        print(number)
+        print(i)
     else:
         print("Данного числа нет в массиве, блищайшее к нему: ", size)
         break
