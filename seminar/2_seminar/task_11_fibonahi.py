@@ -5,9 +5,9 @@ n2 = 1
 i = 3
 number_fibonashi = []
 while n2 < n:
-    n1 , n2 = n2, n1 + n2
+    n1, n2 = n2, n1 + n2
     number_fibonashi.append(n2)
-    i+=1
+    i += 1
 if n2 == n:
     print(number_fibonashi)
     print(i)

@@ -1,11 +1,13 @@
-n = int(input("Сколько кустов?: "))
-arr = list()
-for i in range(n):
-    x = int(input("Число ягод на кусте: "))
-    arr.append(x)
-arr_count = list()
-for i in range(len(arr) - 1):
-    arr_count.append(arr[i - 1] + arr[i] + arr[i + 1])
-arr_count.append(arr[-2] + arr[-1] + arr[0])
-print("Максимальное число ягод: ",)
-print(max(arr_count))
+from random import randint
+size = randint(6, 10)
+bushes = [randint(1, 10) for _ in range(size)]
+print(bushes)
+
+max_blueberries = bushes[-1] + bushes[-2] + bushes[0]
+sum_tree_bushes = max_blueberries
+
+for i in range(size - 1):
+    sum_tree_bushes = bushes[i] + bushes[i - 1] + bushes[i + 1]
+    if sum_tree_bushes > max_blueberries:
+        max_blueberries = sum_tree_bushes
+    print(max_blueberries)
