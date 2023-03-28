@@ -8,6 +8,6 @@ def revers(x):
     if x == 0:
         return print(x)
     else:
-        return 1-revers(x-1)
+        return revers(x-1)
 x = int(input("Введите число для реверса: "))
 print(revers(x))
