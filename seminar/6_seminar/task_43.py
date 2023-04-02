@@ -6,12 +6,12 @@
 # строках.
 # 1 2 3 2 3
 # 2
-spisok = [1, 2, 3, 2, 3, 2, 1, 2]
+spisok = [1, 2, 3, 2, 3]
 
 def sort_list(spisok):
     count = 0
     for i in range(1, len(spisok) - 1):
-        if spisok[i - 1] == spisok[i] == spisok[i + 1]:
+        if spisok[i - 1] == spisok[i + 1]:
             count += 1
     return count
 

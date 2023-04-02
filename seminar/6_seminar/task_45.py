@@ -17,7 +17,7 @@
 #     return sum_divide
 #
 #
-# k, i = 100000, 1
+# k, i = 10000, 1
 # while i < k:
 #     j = sum_divide(i)
 #     if i < j < k and i == sum_divide(j):
